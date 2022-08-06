@@ -68,7 +68,7 @@ func handleReceive(conn net.Conn) {
 		if bytesNum == 0 {
 			break
 		}
-		f.Write(b)
+		f.Write(b[:bytesNum])
 	}
 	fmt.Println("Transfer complete")
 }
